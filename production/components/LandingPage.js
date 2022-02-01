@@ -8,7 +8,12 @@ function LandingPage({items}) {
          <img src='/Image.jpg' width={416} height={416} alt=''/>
          </div>
          <div>
+
            <div className='container1'>
+             {items.map((item) =>(
+               <h1>{item.name}</h1>
+
+             ))}
              <img src='/logo.png' width={50}  height={50} alt=''/>
 
              <div>
