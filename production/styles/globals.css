@@ -14,3 +14,45 @@ a {
 * {
   box-sizing: border-box;
 }
+.button {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  width: 258px;
+  height: 40px;
+  border: solid 2px orange;
+}
+.button1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color:orange;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+  border: solid 2px orange;
+  border-radius: 50px;
+
+}
+
+.Container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  
+}
+.container1{
+  display: grid;
+  background-color: aqua;
+  grid-template-columns: 1fr 1fr 1fr ;
+  align-self: center;
+  
+  
+}
+/*
+
+@media screen and(max-width :480px){
+  .Image{
+    grid-column: span 6;
+  }
+
+}
+  */
+
