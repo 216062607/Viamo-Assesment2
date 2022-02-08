@@ -7,7 +7,7 @@ import LandingPage from '../components/LandingPage'
 
 
 const App=()=> {
-    const [items,setItems]= useState({})
+    const [items,setItems]= useState([])
     
    //Fetching data                                          
     useEffect(()=>{
