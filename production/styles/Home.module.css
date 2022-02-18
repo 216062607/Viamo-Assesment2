@@ -72,7 +72,7 @@
   flex-wrap: wrap;
   max-width: 800px;
 }
-
+/*
 .card {
   margin: 1rem;
   padding: 1.5rem;
@@ -108,17 +108,19 @@
   margin-left: 0.5rem;
 }
 
-
+*/
 @media screen and (max-width :360px){
   .container0{
-    width: 100%;
+    grid-column: span 12;
   }
-  .container1{
-    width:100%;
+  .container2{
+    grid-column: span 12;
   }
 
   .container3{
-    width:100%;
+    grid-column: span 12;
   }
   
+
 }
+

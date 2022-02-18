@@ -13,7 +13,7 @@ const App=()=> {
     useEffect(()=>{
       const fetchItems=async()=>{
         const results = await axios(
-          'https://fe-assignment.vaimo.net/'
+          `https://fe-assignment.vaimo.net/`
         )
         console.log(results.data)
         setItems(results.data)
