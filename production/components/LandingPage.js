@@ -75,9 +75,8 @@ function LandingPage({items}) {
          
             <div className='container3'>
                 <div className='checkout'>
-                  <p>Ship to South Africa</p>
-                  <p>Ship to South Africa</p>
-                  <p>Ship to South Africa</p>
+                 <a>{items.product.name}</a>
+              
                     <div className="button">
                       <div className='txt1'>
                       <a>Log in to purchase</a>

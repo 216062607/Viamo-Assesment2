@@ -31,7 +31,7 @@ const App=()=> {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet"></link>
       </Head>
      
-      <LandingPage items={items}/>
+      {items &&<LandingPage items={items}/>}
     </div>
 
   )
