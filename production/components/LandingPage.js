@@ -22,10 +22,9 @@ function LandingPage({items}) {
 
           <div className='container2'>
               <div className='name'>  
-                {(
-                 <p>{items.product.name}</p>
-                )}
-                    
+              {items &&(<p>{items.product.name}</p>
+              )}
+               
                   </div>
                     <div className='star'>
                      <a> <img src='/star.png' width={14} height={14} alt=''/> <img src='/star.png' width={14} height={14} alt=''/> <img src='/star.png' width={14} height={14} alt=''/> <img src='/star.png' width={14} height={14} alt=''/> <img src='/star.png' width={14} height={14} alt=''/> </a>
@@ -65,7 +64,7 @@ function LandingPage({items}) {
                         <a><img src='/lock.png'/>Trade Assurance protects your Alibaba.com orders </a>
                         <br/>
                         <br/>
-                        <a>Payments : <img src='/visa.svg'/> <img src='/mastercard.svg'/> <img src='/apple_pay.svg'/></a>
+                        <a>Payments : <img src='/visa.svg' width={17} height={12}/> <img src='/mastercard.svg' width={17} height={12}/> <img src='/apple_pay.svg' width={28} height={12}/></a>
                         <br/>
                         <br/>
                         <a>Alibaba.com Logistics   Inspection Solutions </a>
