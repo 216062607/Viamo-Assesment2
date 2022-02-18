@@ -11,13 +11,20 @@ const App=()=> {
     
    //Fetching data                                          
     useEffect(()=>{
-      const fetchItems=async()=>{
-        const results = await axios(
-          `https://fe-assignment.vaimo.net/`
-        )
-        console.log(results.data)
-        setItems(results.data)
+      try {
+        const fetchItems=async()=>{
+          const results = await axios(
+            `https://fe-assignment.vaimo.net/`
+          )
+          console.log(results.data)
+          setItems(results.data)
+          
+        }
+      } catch (error) {
+        console.log(err.stack)
+        
       }
+     
       fetchItems()
   
     },[])
