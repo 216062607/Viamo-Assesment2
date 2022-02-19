@@ -81,7 +81,7 @@ function LandingPage({items}) {
          
             <div className='container3'>
                 <div className='checkout'>
-                  <a>{items.product.shipping.method.country}</a>
+                  <a>{items.product.shipping.method.country} {items.product.shipping.method.cost.currency.symbol} {items.product.shipping.method.cost.value}</a>
                   <br/>
                   <a>{items.product.shipping.lead_time.info}</a>
                   
