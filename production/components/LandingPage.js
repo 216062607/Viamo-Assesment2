@@ -22,8 +22,9 @@ function LandingPage({items}) {
 
           <div className='container2'>
               <div className='name'>  
-              {items &&(<p>{items.product.name}</p>
-              )}
+            <a>  <p>{items.product.name}  {items.product.tags[0]}</p>
+                 
+             </a>
                
                   </div>
                     <div className='star'>
@@ -43,6 +44,11 @@ function LandingPage({items}) {
                   <div className='container1'>
                       <a><img src='/logo.png' width='76px'  height='40px'alt=''/> .Free shipping</a>
 
+                  </div>
+                  <div className='cart'>
+                    <a>{items.product.discount.amount}  {items.product.discount.end_date}</a>
+                  <p>{items.product.options.battery_accessories.label}</p>
+                  <p>{items.product.options["1080p"].label}</p>
                   </div>
                 <div className='quantity'>
                 <div className='qty'>
@@ -75,8 +81,14 @@ function LandingPage({items}) {
          
             <div className='container3'>
                 <div className='checkout'>
-                 <a>{items.product.name}</a>
+                  <a>{items.product.shipping.method.country}</a>
+                  <br/>
+                  <a>{items.product.shipping.lead_time.info}</a>
+                  
+                
+                
               
+             
                     <div className="button">
                       <div className='txt1'>
                       <a>Log in to purchase</a>
