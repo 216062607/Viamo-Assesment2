@@ -21,6 +21,9 @@ function LandingPage({items}) {
          
 
           <div className='container2'>
+            <div className='ready'>
+              <a>Ready to ship</a><p>in stock</p>
+            </div>
               <div className='name'>  
             <a>  <p>{items.product.name}  {items.product.tags[0]}</p>
                  
@@ -31,9 +34,10 @@ function LandingPage({items}) {
                      <a> <img src='/star.png' width={14} height={14} alt=''/> <img src='/star.png' width={14} height={14} alt=''/> <img src='/star.png' width={14} height={14} alt=''/> <img src='/star.png' width={14} height={14} alt=''/> <img src='/star.png' width={14} height={14} alt=''/> </a>
                   </div>
                     <div className='mid-sec'>
-
-                    <p>R78.50 - R895.31 / option 2 Options (Min.Order) </p>
-                    <div className='line'>
+                    <div className='price-s'>
+                    <p>{items.product.options.battery_accessories.price.currency.symbol} {items.product.options.battery_accessories.price.value}- {items.product.options['4k'].price.currency.symbol} {items.product.options['4k'].price.value}/ option 2 Options (Min.Order) </p>
+                    </div>
+                     <div className='line'>
                     <a>R98.12 - R1,119.14 </a>
                     </div>
                     
@@ -46,11 +50,19 @@ function LandingPage({items}) {
 
                   </div>
                   <div className='cart'>
-                    <a>{items.product.discount.amount}  {items.product.discount.end_date}</a>
-                  <p>{items.product.options.battery_accessories.label}</p>
-                  <p>{items.product.options["1080p"].label}</p>
+                    <a>{items.product.discount.amount} Discount ends in {items.product.discount.end_date}</a>
                   </div>
+
                 <div className='quantity'>
+                  <div className='options'>
+                    <a>options</a>
+                  </div>
+                  <div className='options2'>
+                  <a>2</a>
+                  </div>
+                  <div className='options3'>
+                  <a>1</a>
+                  </div>
                 <div className='qty'>
                         <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
                         <input type='text' name='qtyt' id='1' value='0' className='input-filled'></input>
@@ -66,7 +78,9 @@ function LandingPage({items}) {
                         <input type='text' name='qtyt' id='3' value='0' className='input-filled'></input>
                         <div className='inc btn'><img src='/plus.png' width={14} height={14} /></div>
                   </div>
-                  <div className='footer'>
+                  
+                </div>
+                <div className='footer'>
                         <a><img src='/lock.png'/>Trade Assurance protects your Alibaba.com orders </a>
                         <br/>
                         <br/>
@@ -75,8 +89,6 @@ function LandingPage({items}) {
                         <br/>
                         <a>Alibaba.com Logistics   Inspection Solutions </a>
                   </div>
-                </div>
-                 
             </div>
          
             <div className='container3'>
