@@ -6,13 +6,21 @@ import Display from './display';
 
 function LandingPage({items}) {  
   
-  /*
-  const incrementButton = document.getElementsByClassName('inc');
-  const decrementButton = document.getElementsByClassName('dec');
+   // State to store count value
+   const [count, setCount] = useState(0);
+   const incrementCount = () => 
+    // Update state with incremented value
+    setCount(count + 1);
+    //  Update state with incremented value
+    let decrementCount = () => setCount(count - 1);
 
-  console.log(incrementButton);
-  console.log(decrementButton);*/
-    
+    if(count<=0) {
+      decrementCount = () => setCount(1);
+    }
+
+  
+
+  
   return <div className='Container'>
 
           <div className='container0'>
@@ -64,10 +72,45 @@ function LandingPage({items}) {
                   <a>1</a>
                   </div>
                 <div className='qty'>
+                <div className='inc btn' >
+
+<                       button onClick={decrementCount}><img src='/plus.png' width={14} height={14} /></button>
+                        </div>
+                        <div className='count'>
+                          {count}
+                        </div>
                         <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
-                        <input type='text' name='qtyt' id='1' value='0' className='input-filled'></input>
-                        <div className='inc btn'><img src='/plus.png' width={14} height={14} /></div>
                   </div>
+
+                  <div className='qty'>
+                <div className='inc btn' >
+
+<                       button onClick={incrementCount}><img src='/plus.png' width={14} height={14} /></button>
+                        </div>
+                        <div className='count'>
+                          {count}
+                        </div>
+                        <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
+                  </div>
+                  
+                  
+
+
+
+
+
+
+
+                  <div className='qty'>
+               
+                        <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
+                  </div>
+
+
+
+
+
+
                   <div className='qty'>
                         <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
                         <input type='text' name='qtyt' id='2' value='0' className='input-filled'></input>
