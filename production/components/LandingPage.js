@@ -17,8 +17,12 @@ function LandingPage({items}) {
     if(count<=0) {
       decrementCount = () => setCount(1);
     }
+/*
+  const [price,setPrice]=useState(null);
+  const cart = <a>{items.product.options.battery_accessories.price.value}</a>
 
-  
+  setPrice(cart)*/
+
 
   
   return <div className='Container'>
@@ -46,7 +50,7 @@ function LandingPage({items}) {
                     <p>{items.product.options.battery_accessories.price.currency.symbol} {items.product.options.battery_accessories.price.value}- {items.product.options['4k'].price.currency.symbol} {items.product.options['4k'].price.value}/ option 2 Options (Min.Order) </p>
                     </div>
                      <div className='line'>
-                    <a>R98.12 - R1,119.14 </a>
+                    <a>R98,12- R1,114.99</a>
                     </div>
                     
 
@@ -61,7 +65,7 @@ function LandingPage({items}) {
                     <a>{items.product.discount.amount} Discount ends in {items.product.discount.end_date}</a>
                   </div>
 
-                <div className='quantity'>
+                <div className='quatfybntity'>
                   <div className='options'>
                     <a>options</a>
                   </div>
@@ -72,55 +76,38 @@ function LandingPage({items}) {
                   <a>1</a>
                   </div>
                 <div className='qty'>
-                <div className='inc btn' >
+                <div className='btn' >
 
-<                       button onClick={decrementCount}><img src='/plus.png' width={14} height={14} /></button>
-                        </div>
+                    <button onClick={decrementCount}><img src='/minus.png' width={14} height={14} /></button>
+                </div>
                         <div className='count'>
                           {count}
                         </div>
-                        <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
-                  </div>
-
-                  <div className='qty'>
+                        <div className='btn'> <button onClick={incrementCount}><img src='/plus.png' width={14} height={14} /></button>
+                        </div>
+                        <br/>
                 <div className='inc btn' >
 
-<                       button onClick={incrementCount}><img src='/plus.png' width={14} height={14} /></button>
+                    <button onClick={decrementCount}><img src='/minus.png' width={14} height={14} /></button>
+                </div>
+                        <div className='count'>
+                           {count}
                         </div>
+                        <div className='btn'> <button onClick={incrementCount}><img src='/plus.png' width={14} height={14} /></button>
+                        </div>
+                        <div className='btn' >
+
+                    
+                    
+                </div>
+                <button onClick={decrementCount}><img src='/minus.png' width={14} height={14} /></button>
                         <div className='count'>
                           {count}
                         </div>
-                        <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
-                  </div>
-                  
-                  
-
-
-
-
-
-
-
-                  <div className='qty'>
-               
-                        <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
+                        <div className='btn'> <button onClick={incrementCount}><img src='/plus.png' width={14} height={14} /></button>
+                        </div>
                   </div>
 
-
-
-
-
-
-                  <div className='qty'>
-                        <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
-                        <input type='text' name='qtyt' id='2' value='0' className='input-filled'></input>
-                        <div className='inc btn'><img src='/plus.png' width={14} height={14} /></div>
-                  </div>
-                  <div className='qty'>
-                        <div className='dec btn'><img src='/minus.png' width={14} height={14} /></div>
-                        <input type='text' name='qtyt' id='3' value='0' className='input-filled'></input>
-                        <div className='inc btn'><img src='/plus.png' width={14} height={14} /></div>
-                  </div>
                   
                 </div>
                 <div className='footer'>
@@ -136,10 +123,13 @@ function LandingPage({items}) {
          
             <div className='container3'>
                 <div className='checkout'>
-                  <a>{items.product.shipping.method.country} {items.product.shipping.method.cost.currency.symbol} {items.product.shipping.method.cost.value}</a>
+                  <a>{items.product.shipping.method.country} {items.product.shipping.method.cost.currency.symbol} {items.product.options['1080p'].price.value * count}</a>
                   <br/>
                   <a>{items.product.shipping.lead_time.info}</a>
                   
+                  <div className="tool" data-tooltip={items.product.shipping.lead_time.info}>
+
+                  </div>
                 
                 
               
