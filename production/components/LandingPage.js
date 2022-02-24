@@ -58,7 +58,7 @@ function LandingPage({items}) {
                     </div>
                     <br/>
                   <div className='container1'>
-                      <a><img src='/logo.png' width='76px'  height='40px'alt=''/> .Free shipping</a>
+                      <a><img src='/logo.png' width='76px'  height='40px'alt=''/> .</a>
 
                   </div>
                   <div className='cart'>
