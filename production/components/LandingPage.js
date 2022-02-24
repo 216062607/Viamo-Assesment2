@@ -75,37 +75,14 @@ function LandingPage({items}) {
                   <div className='options3'>
                   <a>1</a>
                   </div>
+               
                 <div className='qty'>
-                <div className='btn' >
-
-                    <button onClick={decrementCount}><img src='/minus.png' width={14} height={14} /></button>
-                </div>
-                        <div className='count'>
-                          {count}
-                        </div>
-                        <div className='btn'> <button onClick={incrementCount}><img src='/plus.png' width={14} height={14} /></button>
-                        </div>
-                        <br/>
-                <div className='inc btn' >
-
-                    <button onClick={decrementCount}><img src='/minus.png' width={14} height={14} /></button>
-                </div>
-                        <div className='count'>
-                           {count}
-                        </div>
-                        <div className='btn'> <button onClick={incrementCount}><img src='/plus.png' width={14} height={14} /></button>
-                        </div>
-                        <div className='btn' >
-
-                    
-                    
-                </div>
                 <button onClick={decrementCount}><img src='/minus.png' width={14} height={14} /></button>
                         <div className='count'>
                           {count}
                         </div>
-                        <div className='btn'> <button onClick={incrementCount}><img src='/plus.png' width={14} height={14} /></button>
-                        </div>
+                 <button onClick={incrementCount}><img src='/plus.png' width={14} height={14} /></button>
+                        
                   </div>
 
                   
